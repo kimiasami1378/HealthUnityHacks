@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./sections/theme.css";
+
+import { AppProvider } from "./AppContext";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import MainLayout from "./sections/mainLayout";
+import LoggingPage from "./sections/loggingPage";
+import CalendarPage from "./sections/calendarPage";
+import ChatbotPage from "./sections/chatbotPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <Router>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<LoggingPage />} />
+            <Route path="/calendar" element={<CalendarPage />} />
+            <Route path="/chatbot" element={<ChatbotPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </AppProvider>
   );
 }
 
