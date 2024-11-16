@@ -12,17 +12,16 @@ import nltk
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
-# Define dataset paths
 dataset_paths = {
-    "labels": "/mnt/data/500_Reddit_users_posts_labels.csv",
-    "attempt": "/mnt/data/suicidal_attempt.csv",
-    "behavior": "/mnt/data/suicidal_behavior.csv",
-    "ideation": "/mnt/data/suicidal_ideation.csv",
-    "indicator": "/mnt/data/suicidal_indicator.csv",
-    "batch1": "/mnt/data/Redditors_and_posts_batch_1.xlsx",
-    "batch2": "/mnt/data/Redditors_and_posts_batch_2.xlsx",
-    "batch3": "/mnt/data/Redditors_and_posts_batch_3.xlsx",
-    "batch4": "/mnt/data/Redditors_and_posts_batch_4.xlsx",
+    "labels": "data/500_Reddit_users_posts_labels.csv",
+    "attempt": "data/suicidal_attempt.csv",
+    "behavior": "data/suicidal_behavior.csv",
+    "ideation": "data/suicidal_ideation.csv",
+    "indicator": "data/suicidal_indicator.csv",
+    "batch1": "data/Redditors_and_posts_batch_1.xlsx",
+    "batch2": "data/Redditors_and_posts_batch_2.xlsx",
+    "batch3": "data/Redditors_and_posts_batch_3.xlsx",
+    "batch4": "data/Redditors_and_posts_batch_4.xlsx",
 }
 
 # Preprocessing functions
@@ -86,3 +85,4 @@ if __name__ == "__main__":
     #combined_data = load_and_prepare_data()
     #print(combined_data.head())  # Check the first few rows of the combined dataset
     logging.info("Combined and preprocessed dataset saved as cleaned_combined_data.csv.")
+
