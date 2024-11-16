@@ -86,3 +86,4 @@ if __name__ == "__main__":
     print("Tokens:", preprocessed_result['tokens'])
     print("Lemmatized Text:", preprocessed_result['lemmatized_text'])
     print("Named Entities:", preprocessed_result['named_entities'])
+
